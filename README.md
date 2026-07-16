@@ -1,1 +1,0 @@
-# delid.github.io
