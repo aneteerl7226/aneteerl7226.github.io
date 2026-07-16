@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный Архив | Cipher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Личный Архив</h1>
+            <p class="site-subtitle">Коллекция историй и профайлов персонажей</p>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#characters">Персонажи</a></li>
+            <li><a href="#stories">Истории</a></li>
+            <li><a href="#about">Об Архиве</a></li>
+        </ul>
+    </nav>
+
+    <main class="site-main">
+        <section id="home" class="section-intro">
+            <div class="container">
+                <h2>Добро пожаловать</h2>
+                <p>Здесь собраны данные, история и профили персонажей, созданных или исследованных мной. Этот архив служит хранилищем идей, сюжетов и миров.</p>
+            </div>
+        </section>
+
+        <section id="characters" class="section-content">
+            <div class="container">
+                <h2>Персонажи</h2>
+                <p>Список персонажей будет добавлен позже.</p>
+                <!-- Пример карточки персонажа -->
+                <!-- <article class="character-card">
+                    <h3>Имя Персонажа</h3>
+                    <p>Описание.</p>
+                </article> -->
+            </div>
+        </section>
+
+        <section id="stories" class="section-content">
+            <div class="container">
+                <h2>Истории</h2>
+                <p>Список историй будет добавлен позже.</p>
+            </div>
+        </section>
+
+        <section id="about" class="section-content">
+            <div class="container">
+                <h2>Об Архиве</h2>
+                <p>Этот сайт создан как личное пространство для хранения и демонстрации творческих проектов, связанных с персонажами и мирами, в которых они существуют.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Cipher. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Автоматическое обновление года в футере
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
