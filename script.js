@@ -1,43 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navButtons = document.querySelectorAll('.nav-button');
-    const contentSections = document.querySelectorAll('.content-section');
+document.addEventListener('DOMContentLoaded', () => {
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const sections = document.querySelectorAll('.content-section');
 
-    // Функция для показа секции
-    function showSection(targetId) {
-        // Скрываем все секции
-        contentSections.forEach(section => {
-            section.classList.remove('active');
-        });
+    function showSection(id) {
+        sections.forEach(sec => sec.classList.remove('active'));
+        document.getElementById(id)?.classList.add('active');
 
-        // Показываем нужную секцию
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.classList.add('active');
-        } else {
-             console.error(`Секция с ID "${targetId}" не найдена.`);
-        }
-
-        // Обновляем активную кнопку
-        navButtons.forEach(button => {
-            button.classList.remove('active');
-            if (button.getAttribute('data-target') === targetId) {
-                button.classList.add('active');
-            }
-        });
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        const activeBtn = Array.from(navButtons).find(btn => btn.dataset.target === id);
+        if (activeBtn) activeBtn.classList.add('active');
     }
 
-    // Добавляем обработчики кликов к кнопкам
-    navButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const targetId = this.getAttribute('data-target');
-            showSection(targetId);
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            showSection(btn.dataset.target);
         });
     });
 
-    // Показываем начальную секцию (например, 'home')
-    // Можно убрать, если первая секция изначально имеет класс 'active'
-    // showSection('home'); // Уже активна по умолчанию в HTML
-});
+    // По умолчанию показываем home
+    showSection('home');
 
-// Автоматическое обновление года в футере (оставляем здесь)
-document.getElementById('currentYear').textContent = new Date().getFullYear();
+    // Год в футере
+    document.querySelector('.hud-footer p').innerHTML = 
+        `© ${new Date().getFullYear()} SANTAX SOFTWARES INC. • SYSTEM STATUS: ONLINE`;
+});
