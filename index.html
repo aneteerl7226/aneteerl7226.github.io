@@ -3,71 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный Архив | delid</title>
+    <title>САНТАКС АРХИВ // v9.31</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="site-header">
+<body class="cyber-bg">
+    <!-- Скан-линия (эффект CRT) -->
+    <div class="scanline"></div>
+
+    <header class="hud-header">
         <div class="container">
-            <h1 class="site-title">Личный Архив</h1>
-            <p class="site-subtitle">Коллекция историй и профайлов персонажей</p>
+            <h1 class="title-glitch">САНТАКС АРХИВ</h1>
+            <p class="subtitle">v9.31 • Личный реестр персонажей и миров</p>
         </div>
     </header>
 
-    <nav class="site-nav">
+    <nav class="hud-nav">
         <ul>
-            <li><button class="nav-button active" data-target="home">Главная</button></li>
-            <li><button class="nav-button" data-target="characters">Персонажи</button></li>
-            <li><button class="nav-button" data-target="stories">Истории</button></li>
-            <li><button class="nav-button" data-target="about">Об Архиве</button></li>
+            <li><button class="nav-btn active" data-target="home">ГЛАВНАЯ</button></li>
+            <li><button class="nav-btn" data-target="characters">ПЕРСОНАЖИ</button></li>
+            <li><button class="nav-btn" data-target="stories">ИСТОРИИ</button></li>
+            <li><button class="nav-btn" data-target="about">ОБ АРХИВЕ</button></li>
         </ul>
     </nav>
 
-    <main class="site-main">
+    <main class="hud-main">
         <div class="container">
-            <!-- Контейнер для динамического контента -->
             <div id="content-container">
                 <section id="home" class="content-section active">
-                    <h2>Добро пожаловать</h2>
-                    <p>Здесь собраны данные, история и профили персонажей, созданных или исследованных мной. Этот архив служит хранилищем идей, сюжетов и миров.</p>
+                    <h2 class="section-title">ДОБРО ПОЖАЛОВАТЬ</h2>
+                    <p>Здесь собраны данные, истории и профили персонажей, созданных или исследованных мной. Этот архив служит хранилищем идей, сюжетов и миров.</p>
                 </section>
 
                 <section id="characters" class="content-section">
-                    <h2>Персонажи</h2>
-                    <p>Список персонажей будет добавлен позже.</p>
-                    <article class="character-card">
-                        <h3>Пример Персонажа 1</h3>
-                        <p>Описание персонажа 1...</p>
-                    </article>
-                    <article class="character-card">
-                        <h3>Пример Персонажа 2</h3>
-                        <p>Описание персонажа 2...</p>
-                    </article>
+                    <h2 class="section-title">ПЕРСОНАЖИ</h2>
+                    <div class="card-grid">
+                        <div class="card">
+                            <div class="card-header">UNIT-77</div>
+                            <div class="card-body">
+                                <p>Неизвестный субъект. Обнаружен в зоне 9. Состояние: активен.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header">SAVAGE MENTHE</div>
+                            <div class="card-body">
+                                <p>Уровень 83. Специализация: тактический оператор.</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section id="stories" class="content-section">
-                    <h2>Истории</h2>
-                    <p>Список историй будет добавлен позже.</p>
-                    <article class="story-card">
-                        <h3>Название Истории 1</h3>
-                        <p>Краткое содержание истории 1...</p>
-                    </article>
+                    <h2 class="section-title">ИСТОРИИ</h2>
+                    <div class="story-item">
+                        <div class="story-title">«КРАЙНИЙ СИГНАЛ»</div>
+                        <div class="story-meta">2077-10-14 • КЛАСС: ОМЕГА</div>
+                        <p>Последняя передача с орбитальной станции «Немезида»...</p>
+                    </div>
                 </section>
 
                 <section id="about" class="content-section">
-                    <h2>Об Архиве</h2>
-                    <p>Этот сайт создан как личное пространство для хранения и демонстрации творческих проектов, связанных с персонажами и мирами, в которых они существуют.</p>
+                    <h2 class="section-title">ОБ АРХИВЕ</h2>
+                    <p>Этот сайт создан как личное пространство для хранения и демонстрации творческих проектов, связанных с персонажами и мирами, в которых они существуют. Все данные — результат имитационного моделирования и субъективных записей.</p>
                 </section>
             </div>
         </div>
     </main>
 
-    <footer class="site-footer">
+    <footer class="hud-footer">
         <div class="container">
-            <p>&copy; <span id="currentYear"></span> delid. Все права защищены.</p>
+            <p>© 2026 SANTAX SOFTWARES INC. • SYSTEM STATUS: ONLINE</p>
         </div>
     </footer>
 
-    <script src="script.js"></script> <!-- Подключаем скрипт -->
+    <script src="script.js"></script>
 </body>
 </html>
